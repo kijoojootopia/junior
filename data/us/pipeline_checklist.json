@@ -1,2 +1,38 @@
 [
+    {
+        "stage_step": 1,
+        "task_id": "US_MOCRA_FACILITY",
+        "task_name": "MoCRA 제조 시설 등록 (Facility Registration)",
+        "required_doc": "시설 FEI 번호, U.S. Agent 연락처",
+        "estimated_days": 10,
+        "is_mandatory": true,
+        "guide_url": "https://www.fda.gov/cosmetics/registration-listing-cosmetic-product-facilities-and-products"
+    },
+    {
+        "stage_step": 2,
+        "task_id": "US_MOCRA_LISTING",
+        "task_name": "MoCRA 제품 리스팅 (Product Listing)",
+        "required_doc": "정식 라벨 제품명, 제품 카테고리, 전성분 목록(INCI)",
+        "estimated_days": 7,
+        "is_mandatory": true,
+        "guide_url": "https://www.fda.gov/cosmetics/registration-listing-cosmetic-product-facilities-and-products"
+    },
+    {
+        "stage_step": 3,
+        "task_id": "US_MOCRA_SAFETY",
+        "task_name": "안전성 입증 데이터 구축 (Safety Substantiation)",
+        "required_doc": "성분별 안전성 평가서, 완제품 인체적용시험 결과보고서 등",
+        "estimated_days": 30,
+        "is_mandatory": true,
+        "guide_url": "https://www.fda.gov/cosmetics/cosmetics-laws-regulations/modernization-cosmetics-regulation-act-2022-mocra"
+    },
+    {
+        "stage_step": 4,
+        "task_id": "US_MOCRA_ADVERSE",
+        "task_name": "중대한 유해사례 보고 체계 구축 (Adverse Event Reporting)",
+        "required_doc": "라벨 내 미국 연락처(또는 이메일/웹사이트) 표기, 유해사례 보고 양식",
+        "estimated_days": 14,
+        "is_mandatory": true,
+        "guide_url": "https://www.fda.gov/cosmetics/cosmetics-laws-regulations/modernization-cosmetics-regulation-act-2022-mocra"
+    }
 ]
