@@ -1,0 +1,55 @@
+[
+  {
+    "stage_id": "STAGE_1",
+    "title": "UAE 현지 유통/수입 대리인(Local Representative) 지정",
+    "description": "UAE 내 유효한 무역 라이선스(Trade License)를 보유한 현지 수입업체 또는 공식 대리인을 지정해야 등록 절차 진행이 가능합니다.",
+    "required_documents": [
+      "현지 수입업체 유효 Trade License 사본",
+      "독점/공식 유통 계약서 (Distributor Agreement)",
+      "위임장 (Power of Attorney)"
+    ],
+    "regulation_source": "UAE MoIAT Ministerial Resolution No. 68"
+  },
+  {
+    "stage_id": "STAGE_2",
+    "title": "MoIAT ECAS 적합성 인증 (Certificate of Conformity)",
+    "description": "산업첨단기술부(MoIAT) 산하 ECAS 시스템에 제품을 등록하고 GSO 1943 안전 기준 충족에 따른 CoC(적합성 인증서)를 발급받아야 통관이 허용됩니다.",
+    "required_documents": [
+      "전성분 배합표 (100% Formulation Breakdown)",
+      "공인 시험 성적서 (CoA: 중금속, 미생물, 보존제 한도 검사)",
+      "자유판매증명서 (CFS: 제조국 발급 및 아포스티유/영사 확인)"
+    ],
+    "regulation_source": "UAE.S GSO 1943 / Cabinet Resolution No. 18"
+  },
+  {
+    "stage_id": "STAGE_3",
+    "title": "두바이 지자체 몬타지(Montaji) 전산 시스템 제품 등록",
+    "description": "두바이 지자체(Dubai Municipality) 유통 허가를 위해 Montaji 포털에 바코드, 포장 사양 및 안전성 평가 자료를 사전 승인받아야 합니다.",
+    "required_documents": [
+      "완제품 고해상도 포장 용기 아트워크",
+      "GS1 정품 바코드 등록 증명서",
+      "안전성 데이터 시트 (MSDS / SDS)"
+    ],
+    "regulation_source": "Dubai Municipality Health & Safety Department Regulation"
+  },
+  {
+    "stage_id": "STAGE_4",
+    "title": "할랄(Halal) 및 돼지 유래 원료 불포함 선언",
+    "description": "UAE.S GSO 1943 제4조에 의거하여 돼지 유래 성분(라드 등) 및 이슬람 율법에 위배되는 물질이 처방에 일절 포함되지 않았음을 입증해야 합니다.",
+    "required_documents": [
+      "돼지 유래 성분 불포함 제조사 선언서 (Non-Porcine Statement)",
+      "원료 공급사 Halal 인증서 (동물성 원료 포함 제품에 한함)"
+    ],
+    "regulation_source": "UAE.S GSO 1943 Clause 4.1.2"
+  },
+  {
+    "stage_id": "STAGE_5",
+    "title": "아랍어·영어 필수 라벨링 규정 준수",
+    "description": "제품 용기 및 단상자에 제품명, 제조국(Country of Origin), 유효기간(PAO 또는 EXP), 전성분 및 사용상 주의사항이 아랍어로 병기되어야 합니다.",
+    "required_documents": [
+      "아랍어 병기 최종 단상자 라벨 시안 (Label Artwork)",
+      "개봉 후 사용 기간 (PAO) 또는 유통기한 증빙 자료"
+    ],
+    "regulation_source": "UAE.S GSO 1943 Clause 7 (Labeling Requirements)"
+  }
+]
