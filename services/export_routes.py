@@ -1,1 +1,27 @@
-"""화장품 해외 진출 화면 및 API 라우트 작성용 파일. 구현 대기."""
+"""화장품 해외 진출 화면과 국가별 통계 API."""
+
+import re
+
+from flask import Blueprint, jsonify, render_template, request
+
+from services.export_service import get_trade_stats
+
+
+export_bp = Blueprint("export", __name__)
+COUNTRIES = {"US": "미국", "DE": "독일", "FR": "프랑스", "RU": "러시아", "KZ": "카자흐스탄"}
+
+
+@export_bp.get("/export")
+def dashboard():
+    return render_template("export_dashboard.html", countries=COUNTRIES)
+
+
+@export_bp.get("/api/export/trade")
+def trade():
+    country = request.args.get("country", "").upper()
+    hs_code = request.args.get("hs_code") or None
+    if country not in COUNTRIES:
+        return jsonify({"error": "지원하지 않는 국가 코드입니다."}), 400
+    if hs_code and not re.fullmatch(r"\d{4,10}", hs_code):
+        return jsonify({"error": "HS 코드는 4~10자리 숫자여야 합니다."}), 400
+    return jsonify(get_trade_stats(country, hs_code))

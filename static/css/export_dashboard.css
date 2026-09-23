@@ -1,1 +1,15 @@
-/* 화장품 해외 진출 전용 스타일. 구현 대기. */
+.export-dashboard { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.export-map { position: relative; max-width: 940px; margin: 24px auto; }
+.export-map img { display: block; width: 100%; height: auto; }
+.map-pin { position: absolute; left: var(--x); top: var(--y); transform: translate(-50%, -50%); border: 0; border-radius: 18px; padding: 5px 9px; background: #225ea8; color: white; cursor: pointer; }
+.map-pin:hover, .map-pin[aria-pressed="true"] { background: #143d70; }
+.map-pin:focus-visible, .country-list button:focus-visible { outline: 3px solid #f0a500; outline-offset: 2px; }
+.country-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.country-list button { padding: 8px 12px; cursor: pointer; }
+.country-list button[aria-pressed="true"] { font-weight: bold; border-color: #225ea8; }
+.export-results { margin-top: 24px; }
+.export-cards { display: flex; flex-wrap: wrap; gap: 12px; }
+.export-cards > div { min-width: 180px; padding: 16px; background: #f4f8fc; border-radius: 10px; }
+.trade-chart-row { display: grid; grid-template-columns: 4em minmax(100px, 1fr) 10em; gap: 12px; align-items: center; margin: 8px 0; }
+.trade-chart-row meter { width: 100%; height: 22px; }
+@media (max-width: 600px) { .map-pin { font-size: 10px; padding: 3px; } .trade-chart-row { grid-template-columns: 3em 1fr; } .trade-chart-row span:last-child { grid-column: 2; } }
