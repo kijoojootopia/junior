@@ -7,8 +7,10 @@ load_dotenv()
 
 from services.screening_engine import screen_ingredients
 from services.exchange_api import get_current_exchange_rates
+from services.export_routes import export_bp
 
 app = Flask(__name__)
+app.register_blueprint(export_bp)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
 # 메인 페이지 라우터

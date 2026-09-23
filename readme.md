@@ -100,26 +100,28 @@ conda create -n junior python=3.10 -y
 conda activate junior
 ```
 
-## 화장품 해외 진출 탭 — 파일 구조 준비
+## 화장품 해외 진출 지도
 
-현재는 전용 파일만 준비한 상태이며 화면, API, 계산 및 추천 기능은 구현되지 않았습니다.
-예정 기능은 유사도·수출적합도 KPI 카드, HS 코드별 국가별 수출액·성장률·관세 차트,
-통관 로드맵, 현지 Distributor 추천 목록입니다.
+`/export`에서 미국, 독일, 프랑스, 러시아, 카자흐스탄을 지도나 국가 목록에서 선택할 수 있습니다.
+`GET /api/export/trade?country=US`는 국가별 연도별 수출액과 전년 대비 성장률을 반환합니다.
+HS 코드 필터는 `hs_code` 쿼리 매개변수로 전달할 수 있습니다. 화면의 HS 코드 선택 UI는 매핑 데이터가 준비된 후 추가합니다.
+통관 로드맵과 Distributor 추천 화면은 아직 구현되지 않았습니다.
 
-- KPI 산출 방식: 미정. 비교 기준, 산식 및 가중치 확정 후 구현합니다.
-- 데이터: `data/export/`의 JSON 파일은 모두 빈 객체(`{}`)입니다. 스키마와 데이터 기준은 미정이며 임의 수치, 업체, 규제 정보 또는 샘플 데이터는 포함하지 않았습니다.
-- 연결 상태: 기존 `app.py` 및 화면 템플릿에는 아직 연결하지 않았습니다.
+- 성장률 산식: `(최신 연도 수출액 / 바로 전 연도 수출액 - 1) × 100`. 전년도 자료가 없거나 0이면 `null`(화면에는 산정 불가)입니다.
+- 수출액은 같은 국가·연도의 품목별 금액을 합산합니다. 원자료는 `data/export/trade_stats.json`의 `records` 배열에 `country`(국가 코드), `hs_code`, `year`(정수), `export_usd`(USD 금액) 필드로 저장하도록 설계했습니다. 동일 국가·연도·HS 코드의 중복 기록은 넣지 않아야 합니다.
+- 현재 수출 통계 파일은 빈 객체(`{}`)이며 실제 수출액, 성장률 또는 샘플 수치를 넣지 않았습니다. 수출적합도 KPI의 산식 및 가중치도 미정입니다.
+- 세계 지도 SVG는 Wikimedia Commons의 [CC0 세계 지도](https://commons.wikimedia.org/wiki/File:BlankMap-World-Equirectangular.svg)를 사용합니다.
 
 추가 파일 목록:
 
-- `services/export_routes.py`: 화면 및 API 라우트 작성용
-- `services/export_service.py`: 계산 및 추천 로직 작성용
-- `templates/export_dashboard.html`: 전용 화면 작성용
-- `static/css/export_dashboard.css`: 전용 스타일 작성용
-- `static/js/export_dashboard.js`: 화면 동작 및 차트 작성용
+- `services/export_routes.py`: 지도 화면 및 수출 통계 API
+- `services/export_service.py`: 수출 통계 집계 및 성장률 계산
+- `templates/export_dashboard.html`: 지도와 통계 카드 화면
+- `static/css/export_dashboard.css`: 지도와 통계 차트 스타일
+- `static/js/export_dashboard.js`: 국가 선택 및 비동기 화면 갱신
+- `static/img/world.svg`: 세계 지도 배경
 - `data/export/hs_codes.json`: HS 코드 매핑 저장용
 - `data/export/trade_stats.json`: 수출 통계 저장용
 - `data/export/tariffs.json`: 관세 데이터 저장용
-- `data/export/product_profiles.json`: 비교 제품 데이터 저장용
 - `data/export/customs_roadmaps.json`: 통관 로드맵 저장용
 - `data/export/distributors.json`: 유통사 데이터 저장용
