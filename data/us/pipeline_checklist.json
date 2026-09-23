@@ -1,4 +1,5 @@
-[
+{
+  "GENERAL": [
     {
         "stage_step": 1,
         "task_id": "US_MOCRA_FACILITY",
@@ -35,4 +36,43 @@
         "is_mandatory": true,
         "guide_url": "https://www.fda.gov/cosmetics/cosmetics-laws-regulations/modernization-cosmetics-regulation-act-2022-mocra"
     }
-]
+  ],
+  "OTC": [
+    {
+        "stage_step": 1,
+        "task_id": "US_OTC_MONOGRAPH",
+        "task_name": "OTC 모노그래프(Monograph) 요건 대조",
+        "required_doc": "활성 성분 농도 검토서, FDA Monograph 기준 대조표",
+        "estimated_days": 5,
+        "is_mandatory": true,
+        "guide_url": "https://www.fda.gov/drugs/otc-monograph-directed-non-prescription-drugs"
+    },
+    {
+        "stage_step": 2,
+        "task_id": "US_OTC_ESTABLISHMENT",
+        "task_name": "FDA 의약품 제조소(Drug Establishment) 등록",
+        "required_doc": "DUNS 번호, 의약품 공장 실사(Inspection) 준비 서류",
+        "estimated_days": 45,
+        "is_mandatory": true,
+        "guide_url": "https://www.fda.gov/drugs/drug-registration-and-listing-system-edrls"
+    },
+    {
+        "stage_step": 3,
+        "task_id": "US_OTC_NDC",
+        "task_name": "NDC (National Drug Code) 라벨 획득",
+        "required_doc": "Drug Facts 패키지 디자인안, 라벨 텍스트 검토서",
+        "estimated_days": 14,
+        "is_mandatory": true,
+        "guide_url": "https://www.fda.gov/drugs/drug-approvals-and-databases/national-drug-code-directory"
+    },
+    {
+        "stage_step": 4,
+        "task_id": "US_OTC_MOCRA_DUAL",
+        "task_name": "MoCRA 요건 추가 충족 (이중 규제)",
+        "required_doc": "MoCRA 유해사례 보고 양식 및 화장품 성분 안전성 데이터",
+        "estimated_days": 14,
+        "is_mandatory": true,
+        "guide_url": "https://www.fda.gov/cosmetics/cosmetics-laws-regulations/modernization-cosmetics-regulation-act-2022-mocra"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 [
     {
-        "cas_no": "",
+        "cas_no": "7429-90-5",
         "inci_name": "Aluminum powder",
-        "kr_name": "",
+        "kr_name": "알루미늄가루",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -10,9 +10,9 @@
         "regulation_source": "FDA 21 CFR 73.2645"
     },
     {
-        "cas_no": "",
+        "cas_no": "1398-28-3",
         "inci_name": "Annatto",
-        "kr_name": "",
+        "kr_name": "아나토",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -20,9 +20,9 @@
         "regulation_source": "FDA 21 CFR 73.203"
     },
     {
-        "cas_no": "",
+        "cas_no": "813-93-4",
         "inci_name": "Bismuth citrate",
-        "kr_name": "",
+        "kr_name": "비스무스시트레이트",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -30,9 +30,9 @@
         "regulation_source": "FDA 21 CFR 73.211"
     },
     {
-        "cas_no": "",
+        "cas_no": "7787-59-9",
         "inci_name": "Bismuth oxychloride",
-        "kr_name": "",
+        "kr_name": "비스무스옥시클로라이드",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -40,9 +40,9 @@
         "regulation_source": "FDA 21 CFR 73.2162"
     },
     {
-        "cas_no": "",
+        "cas_no": "7440-50-8",
         "inci_name": "Bronze powder",
-        "kr_name": "",
+        "kr_name": "브론즈가루",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -50,9 +50,9 @@
         "regulation_source": "FDA 21 CFR 73.2646"
     },
     {
-        "cas_no": "",
+        "cas_no": "8028-89-5",
         "inci_name": "Caramel",
-        "kr_name": "",
+        "kr_name": "카라멜",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -60,9 +60,9 @@
         "regulation_source": "FDA 21 CFR 73.2085"
     },
     {
-        "cas_no": "",
+        "cas_no": "1390-65-4",
         "inci_name": "Carmine",
-        "kr_name": "",
+        "kr_name": "카민",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -70,9 +70,9 @@
         "regulation_source": "FDA 21 CFR 73.2087"
     },
     {
-        "cas_no": "",
+        "cas_no": "7235-40-7",
         "inci_name": "β-Carotene",
-        "kr_name": "",
+        "kr_name": "베타-카로틴",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -80,9 +80,9 @@
         "regulation_source": "FDA 21 CFR 73.2095"
     },
     {
-        "cas_no": "",
+        "cas_no": "12001-99-9",
         "inci_name": "Chromium hydroxide green",
-        "kr_name": "",
+        "kr_name": "크로뮴하이드록사이드그린",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -90,9 +90,9 @@
         "regulation_source": "FDA 21 CFR 73.2326"
     },
     {
-        "cas_no": "",
+        "cas_no": "1308-38-9",
         "inci_name": "Chromium oxide greens",
-        "kr_name": "",
+        "kr_name": "크로뮴옥사이드그린",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -100,9 +100,9 @@
         "regulation_source": "FDA 21 CFR 73.2327"
     },
     {
-        "cas_no": "",
+        "cas_no": "7440-50-8",
         "inci_name": "Copper powder",
-        "kr_name": "",
+        "kr_name": "카퍼가루",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -110,9 +110,9 @@
         "regulation_source": "FDA 21 CFR 73.2647"
     },
     {
-        "cas_no": "",
+        "cas_no": "96-26-4",
         "inci_name": "Dihydroxyacetone",
-        "kr_name": "",
+        "kr_name": "다이하이드록시아세톤",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -120,9 +120,9 @@
         "regulation_source": "FDA 21 CFR 73.215"
     },
     {
-        "cas_no": "",
+        "cas_no": "14025-15-1",
         "inci_name": "Disodium EDTA-copper",
-        "kr_name": "",
+        "kr_name": "다이소듐이디티에이-카퍼",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -130,9 +130,9 @@
         "regulation_source": "FDA 21 CFR 73.212"
     },
     {
-        "cas_no": "",
+        "cas_no": "25869-00-5",
         "inci_name": "Ferric ammonium ferrocyanide",
-        "kr_name": "",
+        "kr_name": "페릭암모늄페로시아나이드",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -140,9 +140,9 @@
         "regulation_source": "FDA 21 CFR 73.2298"
     },
     {
-        "cas_no": "",
+        "cas_no": "14038-43-8",
         "inci_name": "Ferric ferrocyanide",
-        "kr_name": "",
+        "kr_name": "페릭페로시아나이드",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -150,9 +150,9 @@
         "regulation_source": "FDA 21 CFR 73.2299"
     },
     {
-        "cas_no": "",
+        "cas_no": "489-84-9",
         "inci_name": "Guaiazulene",
-        "kr_name": "",
+        "kr_name": "구아이아줄렌",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -160,9 +160,9 @@
         "regulation_source": "FDA 21 CFR 73.218"
     },
     {
-        "cas_no": "",
+        "cas_no": "73-40-5",
         "inci_name": "Guanine",
-        "kr_name": "",
+        "kr_name": "구아닌",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -170,9 +170,9 @@
         "regulation_source": "FDA 21 CFR 73.2329"
     },
     {
-        "cas_no": "",
+        "cas_no": "84988-66-9",
         "inci_name": "Henna",
-        "kr_name": "",
+        "kr_name": "헤나",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -180,9 +180,9 @@
         "regulation_source": "FDA 21 CFR 73.219"
     },
     {
-        "cas_no": "",
+        "cas_no": "1332-37-2",
         "inci_name": "Iron oxides",
-        "kr_name": "",
+        "kr_name": "아이언옥사이드",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -190,9 +190,9 @@
         "regulation_source": "FDA 21 CFR 73.225"
     },
     {
-        "cas_no": "",
+        "cas_no": "1314-98-3",
         "inci_name": "Luminescent zinc sulfide",
-        "kr_name": "",
+        "kr_name": "루미네슨트징크설파이드",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -200,9 +200,9 @@
         "regulation_source": "FDA 21 CFR 73.2995"
     },
     {
-        "cas_no": "",
+        "cas_no": "10101-66-3",
         "inci_name": "Manganese violet",
-        "kr_name": "",
+        "kr_name": "망가니즈바이올렛",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -210,9 +210,9 @@
         "regulation_source": "FDA 21 CFR 73.2775"
     },
     {
-        "cas_no": "",
+        "cas_no": "12001-26-2",
         "inci_name": "Mica",
-        "kr_name": "",
+        "kr_name": "마이카",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -220,9 +220,9 @@
         "regulation_source": "FDA 21 CFR 73.2496"
     },
     {
-        "cas_no": "",
+        "cas_no": "11006-34-1",
         "inci_name": "Potassium sodium copper chlorophyllin (chlorophyllin-copper complex)",
-        "kr_name": "",
+        "kr_name": "포타슘소듐카퍼클로로필린",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -230,9 +230,9 @@
         "regulation_source": "FDA 21 CFR 73.2125"
     },
     {
-        "cas_no": "",
+        "cas_no": "12269-78-2",
         "inci_name": "Pyrophyllite",
-        "kr_name": "",
+        "kr_name": "파이로필라이트",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -240,9 +240,9 @@
         "regulation_source": "FDA 21 CFR 73.24"
     },
     {
-        "cas_no": "",
+        "cas_no": "7440-22-4",
         "inci_name": "Silver",
-        "kr_name": "",
+        "kr_name": "실버",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -250,9 +250,9 @@
         "regulation_source": "FDA 21 CFR 73.25"
     },
     {
-        "cas_no": "",
+        "cas_no": "7761-88-8",
         "inci_name": "Silver nitrate",
-        "kr_name": "",
+        "kr_name": "실버나이트레이트",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -260,9 +260,9 @@
         "regulation_source": "FDA 21 CFR 73.255"
     },
     {
-        "cas_no": "",
+        "cas_no": "13463-67-7",
         "inci_name": "Titanium dioxide",
-        "kr_name": "",
+        "kr_name": "티타늄디옥사이드",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -270,9 +270,9 @@
         "regulation_source": "FDA 21 CFR 73.2575"
     },
     {
-        "cas_no": "",
+        "cas_no": "57455-37-5",
         "inci_name": "Ultramarines",
-        "kr_name": "",
+        "kr_name": "울트라마린",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -280,9 +280,9 @@
         "regulation_source": "FDA 21 CFR 73.2725"
     },
     {
-        "cas_no": "",
+        "cas_no": "1314-13-2",
         "inci_name": "Zinc oxide",
-        "kr_name": "",
+        "kr_name": "징크옥사이드",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -290,9 +290,9 @@
         "regulation_source": "FDA 21 CFR 73.2991"
     },
     {
-        "cas_no": "",
+        "cas_no": "1333-86-4",
         "inci_name": "D&C Black No. 2",
-        "kr_name": "",
+        "kr_name": "흑색2호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -300,9 +300,9 @@
         "regulation_source": "FDA 21 CFR 74.2052"
     },
     {
-        "cas_no": "",
+        "cas_no": "8005-02-5",
         "inci_name": "D&C Black No. 3",
-        "kr_name": "",
+        "kr_name": "흑색3호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -310,9 +310,9 @@
         "regulation_source": "FDA 21 CFR 74.2053"
     },
     {
-        "cas_no": "",
+        "cas_no": "3844-45-9",
         "inci_name": "FD&C Blue No. 1",
-        "kr_name": "",
+        "kr_name": "청색1호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -320,9 +320,9 @@
         "regulation_source": "FDA 21 CFR 74.2101"
     },
     {
-        "cas_no": "",
+        "cas_no": "37307-56-5",
         "inci_name": "D&C Blue No. 4",
-        "kr_name": "",
+        "kr_name": "청색4호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -330,9 +330,9 @@
         "regulation_source": "FDA 21 CFR 74.2104"
     },
     {
-        "cas_no": "",
+        "cas_no": "1320-07-6",
         "inci_name": "D&C Brown No. 1",
-        "kr_name": "",
+        "kr_name": "갈색1호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -340,9 +340,9 @@
         "regulation_source": "FDA 21 CFR 74.2151"
     },
     {
-        "cas_no": "",
+        "cas_no": "2353-45-9",
         "inci_name": "FD&C Green No. 3",
-        "kr_name": "",
+        "kr_name": "녹색3호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -350,9 +350,9 @@
         "regulation_source": "FDA 21 CFR 74.2203"
     },
     {
-        "cas_no": "",
+        "cas_no": "4403-90-1",
         "inci_name": "D&C Green No. 5",
-        "kr_name": "",
+        "kr_name": "녹색5호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -360,9 +360,9 @@
         "regulation_source": "FDA 21 CFR 74.2205"
     },
     {
-        "cas_no": "",
+        "cas_no": "128-80-3",
         "inci_name": "D&C Green No. 6",
-        "kr_name": "",
+        "kr_name": "녹색6호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -370,9 +370,9 @@
         "regulation_source": "FDA 21 CFR 74.2206"
     },
     {
-        "cas_no": "",
+        "cas_no": "6358-69-6",
         "inci_name": "D&C Green No. 8",
-        "kr_name": "",
+        "kr_name": "녹색8호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -380,9 +380,9 @@
         "regulation_source": "FDA 21 CFR 74.2208"
     },
     {
-        "cas_no": "",
+        "cas_no": "633-96-5",
         "inci_name": "D&C Orange No. 4",
-        "kr_name": "",
+        "kr_name": "오렌지색4호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -390,9 +390,9 @@
         "regulation_source": "FDA 21 CFR 74.2254"
     },
     {
-        "cas_no": "",
+        "cas_no": "596-03-2",
         "inci_name": "D&C Orange No. 5",
-        "kr_name": "",
+        "kr_name": "오렌지색5호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -400,9 +400,9 @@
         "regulation_source": "FDA 21 CFR 74.2255"
     },
     {
-        "cas_no": "",
+        "cas_no": "518-47-8",
         "inci_name": "D&C Orange No. 10",
-        "kr_name": "",
+        "kr_name": "오렌지색10호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -410,9 +410,9 @@
         "regulation_source": "FDA 21 CFR 74.2260"
     },
     {
-        "cas_no": "",
+        "cas_no": "4372-02-5",
         "inci_name": "D&C Orange No. 11",
-        "kr_name": "",
+        "kr_name": "오렌지색11호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -420,9 +420,9 @@
         "regulation_source": "FDA 21 CFR 74.2261"
     },
     {
-        "cas_no": "",
+        "cas_no": "3761-53-3",
         "inci_name": "FD&C Red No. 4",
-        "kr_name": "",
+        "kr_name": "적색4호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -430,9 +430,9 @@
         "regulation_source": "FDA 21 CFR 74.2304"
     },
     {
-        "cas_no": "",
+        "cas_no": "5858-81-1",
         "inci_name": "D&C Red No. 6",
-        "kr_name": "",
+        "kr_name": "적색6호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -440,9 +440,9 @@
         "regulation_source": "FDA 21 CFR 74.2306"
     },
     {
-        "cas_no": "",
+        "cas_no": "5281-04-9",
         "inci_name": "D&C Red No. 7",
-        "kr_name": "",
+        "kr_name": "적색7호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -450,9 +450,9 @@
         "regulation_source": "FDA 21 CFR 74.2307"
     },
     {
-        "cas_no": "",
+        "cas_no": "85-86-9",
         "inci_name": "D&C Red No. 17",
-        "kr_name": "",
+        "kr_name": "적색17호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -460,9 +460,9 @@
         "regulation_source": "FDA 21 CFR 74.2317"
     },
     {
-        "cas_no": "",
+        "cas_no": "15086-94-9",
         "inci_name": "D&C Red No. 21",
-        "kr_name": "",
+        "kr_name": "적색21호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -470,9 +470,9 @@
         "regulation_source": "FDA 21 CFR 74.2321"
     },
     {
-        "cas_no": "",
+        "cas_no": "548-26-5",
         "inci_name": "D&C Red No. 22",
-        "kr_name": "",
+        "kr_name": "적색22호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -480,9 +480,9 @@
         "regulation_source": "FDA 21 CFR 74.2322"
     },
     {
-        "cas_no": "",
+        "cas_no": "13473-26-2",
         "inci_name": "D&C Red No. 27",
-        "kr_name": "",
+        "kr_name": "적색27호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -490,9 +490,9 @@
         "regulation_source": "FDA 21 CFR 74.2327"
     },
     {
-        "cas_no": "",
+        "cas_no": "18472-87-2",
         "inci_name": "D&C Red No. 28",
-        "kr_name": "",
+        "kr_name": "적색28호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -500,9 +500,9 @@
         "regulation_source": "FDA 21 CFR 74.2328"
     },
     {
-        "cas_no": "",
+        "cas_no": "2379-74-0",
         "inci_name": "D&C Red No. 30",
-        "kr_name": "",
+        "kr_name": "적색30호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -510,9 +510,9 @@
         "regulation_source": "FDA 21 CFR 74.2330"
     },
     {
-        "cas_no": "",
+        "cas_no": "6471-51-8",
         "inci_name": "D&C Red No. 31",
-        "kr_name": "",
+        "kr_name": "적색31호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -520,9 +520,9 @@
         "regulation_source": "FDA 21 CFR 74.2331"
     },
     {
-        "cas_no": "",
+        "cas_no": "3567-66-6",
         "inci_name": "D&C Red No. 33",
-        "kr_name": "",
+        "kr_name": "적색33호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -530,9 +530,9 @@
         "regulation_source": "FDA 21 CFR 74.2333"
     },
     {
-        "cas_no": "",
+        "cas_no": "6417-83-0",
         "inci_name": "D&C Red No. 34",
-        "kr_name": "",
+        "kr_name": "적색34호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -540,9 +540,9 @@
         "regulation_source": "FDA 21 CFR 74.2334"
     },
     {
-        "cas_no": "",
+        "cas_no": "2814-77-9",
         "inci_name": "D&C Red No. 36",
-        "kr_name": "",
+        "kr_name": "적색36호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -550,9 +550,9 @@
         "regulation_source": "FDA 21 CFR 74.2336"
     },
     {
-        "cas_no": "",
+        "cas_no": "25956-17-6",
         "inci_name": "FD&C Red No. 40",
-        "kr_name": "",
+        "kr_name": "적색40호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -560,9 +560,9 @@
         "regulation_source": "FDA 21 CFR 74.2340"
     },
     {
-        "cas_no": "",
+        "cas_no": "81-48-1",
         "inci_name": "D&C Violet No. 2",
-        "kr_name": "",
+        "kr_name": "자색2호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -570,9 +570,9 @@
         "regulation_source": "FDA 21 CFR 74.2602"
     },
     {
-        "cas_no": "",
+        "cas_no": "4430-18-6",
         "inci_name": "Ext. D&C Violet No. 2",
-        "kr_name": "",
+        "kr_name": "자색201호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -580,9 +580,9 @@
         "regulation_source": "FDA 21 CFR 74.2602a"
     },
     {
-        "cas_no": "",
+        "cas_no": "1934-21-0",
         "inci_name": "FD&C Yellow No. 5",
-        "kr_name": "",
+        "kr_name": "황색4호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -590,9 +590,9 @@
         "regulation_source": "FDA 21 CFR 74.2705"
     },
     {
-        "cas_no": "",
+        "cas_no": "2783-94-0",
         "inci_name": "FD&C Yellow No. 6",
-        "kr_name": "",
+        "kr_name": "황색5호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -600,9 +600,9 @@
         "regulation_source": "FDA 21 CFR 74.2706"
     },
     {
-        "cas_no": "",
+        "cas_no": "2321-07-5",
         "inci_name": "D&C Yellow No. 7",
-        "kr_name": "",
+        "kr_name": "황색202호의(1)",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -610,9 +610,9 @@
         "regulation_source": "FDA 21 CFR 74.2707"
     },
     {
-        "cas_no": "",
+        "cas_no": "846-70-8",
         "inci_name": "Ext. D&C Yellow No. 7",
-        "kr_name": "",
+        "kr_name": "황색403호의(1)",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -620,9 +620,9 @@
         "regulation_source": "FDA 21 CFR 74.2707a"
     },
     {
-        "cas_no": "",
+        "cas_no": "518-47-8",
         "inci_name": "D&C Yellow No. 8",
-        "kr_name": "",
+        "kr_name": "황색202호의(2)",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -630,9 +630,9 @@
         "regulation_source": "FDA 21 CFR 74.2708"
     },
     {
-        "cas_no": "",
+        "cas_no": "8004-92-0",
         "inci_name": "D&C Yellow No. 10",
-        "kr_name": "",
+        "kr_name": "황색203호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
@@ -640,9 +640,9 @@
         "regulation_source": "FDA 21 CFR 74.2710"
     },
     {
-        "cas_no": "",
+        "cas_no": "8003-22-3",
         "inci_name": "D&C Yellow No. 11",
-        "kr_name": "",
+        "kr_name": "황색204호",
         "status": "RESTRICTED",
         "max_concentration": null,
         "product_type_scope": "GENERAL",
