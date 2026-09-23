@@ -1,4 +1,128 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<h1>K-뷰티 글로벌 규제 및 수출입 파이프라인</h1>
+<div class="dashboard-container">
+    <!-- 헤더 영역 -->
+    <header class="dashboard-header">
+        <h2>K-뷰티 글로벌 규제 및 수출입 파이프라인</h2>
+        <div class="fx-ticker">
+            <span class="badge">실시간 고시 환율</span>
+            <span>USD: <strong>{{ rates.USD }}</strong>원</span>
+            <span>EUR: <strong>{{ rates.EUR }}</strong>원</span>
+            <span>RUB: <strong>{{ rates.RUB }}</strong>원</span>
+        </div>
+    </header>
+
+    <!-- 상단: 분석 대상 파일 업로드 카드 -->
+    <section class="card upload-card">
+        <h3>자사 제품 전성분 CSV 업로드 & 타깃 국가 선택</h3>
+        <form id="uploadForm" class="upload-form">
+            <div class="form-group">
+                <label for="regionSelect">수출 타깃 권역:</label>
+                <select id="regionSelect" name="region">
+                    <option value="us">미국 (FDA / MoCRA)</option>
+                    <option value="eu">유럽 (CosIng / CPNP)</option>
+                    <option value="eac">러시아/EAEU (CU TR 009)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="file" id="csvFile" name="file" accept=".csv" required>
+            </div>
+            <button type="submit" class="btn-primary">진단 시작하기</button>
+        </form>
+    </section>
+
+    <!-- 대시보드 3대 구역 메인 그리드 -->
+    <div class="grid-layout">
+        <!-- 구역 1: 성분 규제 스크리닝 진단표 -->
+        <section class="card area-1">
+            <div class="card-header">
+                <h3>구역 1: 성분 규제 스크리닝</h3>
+                <span id="screenStatus" class="status-badge">대기 중</span>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>성분명(INCI)</th>
+                            <th>배합량(%)</th>
+                            <th>규제 상태</th>
+                            <th>적합 여부</th>
+                            <th>상세 조건</th>
+                        </tr>
+                    </thead>
+                    <tbody id="screeningResults">
+                        <tr>
+                            <td colspan="5" class="placeholder-text">CSV 파일을 업로드하면 성분별 규제 적합도가 분석됩니다.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 구역 2: 국가별 규제 변경 추적 피드 -->
+        <section class="card area-2">
+            <div class="card-header">
+                <h3>구역 2: 국가별 최신 규제 개정 알림</h3>
+            </div>
+            <ul class="news-feed">
+                <li class="feed-item">
+                    <span class="feed-tag us">미국</span>
+                    <p class="feed-title">FDA MoCRA 시설 등록 및 제품 리스팅 정식 시행</p>
+                    <span class="feed-date">유예기간 만료 대응 필요</span>
+                </li>
+                <li class="feed-item">
+                    <span class="feed-tag eu">유럽</span>
+                    <p class="feed-title">EU CPNP 알레르겐 표기 성분 56종 확대 적용 가이드</p>
+                    <span class="feed-date">라벨링 개정 필수</span>
+                </li>
+                <li class="feed-item">
+                    <span class="feed-tag eac">EAC</span>
+                    <p class="feed-title">유라시아 연합 국가등록증(SGR) 시험 검사 기준 강화</p>
+                    <span class="feed-date">통관 주의</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 구역 3: 맞춤형 수출 서류 파이프라인 로드맵 -->
+        <section class="card area-3">
+            <div class="card-header">
+                <h3>구역 3: 맞춤형 수출 서류 파이프라인</h3>
+            </div>
+            <div class="pipeline-steps">
+                <div class="step-node active">
+                    <div class="circle">1</div>
+                    <div class="step-info">
+                        <strong>성분 검토</strong>
+                        <p>금지/한도 대조</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-node">
+                    <div class="circle">2</div>
+                    <div class="step-info">
+                        <strong>서류 준비</strong>
+                        <p>MSDS/CPSR 구비</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-node">
+                    <div class="circle">3</div>
+                    <div class="step-info">
+                        <strong>인증/신고</strong>
+                        <p>MoCRA / CPNP</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-node">
+                    <div class="circle">4</div>
+                    <div class="step-info">
+                        <strong>현지 통관</strong>
+                        <p>라벨링 및 수출입 검역</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
 {% endblock %}
