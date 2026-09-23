@@ -98,3 +98,28 @@ conda create -n junior python=3.10 -y
 
 # 2. 가상환경 활성화
 conda activate junior
+```
+
+## 화장품 해외 진출 탭 — 파일 구조 준비
+
+현재는 전용 파일만 준비한 상태이며 화면, API, 계산 및 추천 기능은 구현되지 않았습니다.
+예정 기능은 유사도·수출적합도 KPI 카드, HS 코드별 국가별 수출액·성장률·관세 차트,
+통관 로드맵, 현지 Distributor 추천 목록입니다.
+
+- KPI 산출 방식: 미정. 비교 기준, 산식 및 가중치 확정 후 구현합니다.
+- 데이터: `data/export/`의 JSON 파일은 모두 빈 객체(`{}`)입니다. 스키마와 데이터 기준은 미정이며 임의 수치, 업체, 규제 정보 또는 샘플 데이터는 포함하지 않았습니다.
+- 연결 상태: 기존 `app.py` 및 화면 템플릿에는 아직 연결하지 않았습니다.
+
+추가 파일 목록:
+
+- `services/export_routes.py`: 화면 및 API 라우트 작성용
+- `services/export_service.py`: 계산 및 추천 로직 작성용
+- `templates/export_dashboard.html`: 전용 화면 작성용
+- `static/css/export_dashboard.css`: 전용 스타일 작성용
+- `static/js/export_dashboard.js`: 화면 동작 및 차트 작성용
+- `data/export/hs_codes.json`: HS 코드 매핑 저장용
+- `data/export/trade_stats.json`: 수출 통계 저장용
+- `data/export/tariffs.json`: 관세 데이터 저장용
+- `data/export/product_profiles.json`: 비교 제품 데이터 저장용
+- `data/export/customs_roadmaps.json`: 통관 로드맵 저장용
+- `data/export/distributors.json`: 유통사 데이터 저장용
