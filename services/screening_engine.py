@@ -1,93 +1,145 @@
 # 성분 판정 엔진
+# services/screening_engine.py
 import os
 import json
 import pandas as pd
 
-def load_json_db(file_path):
-    """JSON 파일을 안전하게 로드하는 헬퍼 함수"""
-    if os.path.exists(file_path):
-        with open(file_path, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return []
-
 def screen_ingredients(csv_file_path, target_region):
     """
-    csv_file_path: 업로드된 CSV 파일 경로[cite: 1]
-    target_region: 'us', 'eu', 'eac' 중 하나[cite: 1]
+    선택된 국가(target_region) 폴더 내의 규제 DB만 독립적으로 로드하여
+    CSV의 INCI 명칭 및 상단 CAS 번호를 2중 교차 대조합니다.
     """
-    base_dir = os.path.join("data", target_region)
-    prohibited_path = os.path.join(base_dir, "prohibited_ingredients.json")
-    restricted_path = os.path.join(base_dir, "restricted_ingredients.json")
+    # 1. 오직 선택된 국가의 폴더(data/{target_region})만 특정하여 접근
+    base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    region_folder = os.path.join(base_dir, "data", target_region.lower())
     
-    # 1. 금지 및 규제 JSON DB 로드 및 딕셔너리 구축
-    prohibited_db = load_json_db(prohibited_path)
-    restricted_db = load_json_db(restricted_path)
-    
-    if not prohibited_db and not restricted_db:
-        return {"error": "해당 국가의 규제 데이터가 없습니다."} #[cite: 1]
+    inci_dict = {}
+    cas_dict = {}
 
-    # 빠른 검색을 위한 딕셔너리 인덱싱 (금지 목록 우선 적용)
-    rules_dict = {}
-    for item in restricted_db:
-        if "inci_name" in item:
-            rules_dict[item["inci_name"].lower().strip()] = item
-            
-    for item in prohibited_db:
-        if "inci_name" in item:
-            # 금지 성분이 우선 적용되도록 덮어씀
-            rules_dict[item["inci_name"].lower().strip()] = item
+    if os.path.exists(region_folder):
+        for file_name in os.listdir(region_folder):
+            if file_name.endswith(".json"):
+                full_path = os.path.join(region_folder, file_name)
+                try:
+                    with open(full_path, "r", encoding="utf-8") as f:
+                        content = f.read().strip()
+                        if content:
+                            data_list = json.loads(content)
+                            for item in data_list:
+                                # 1) 순수 INCI명 등록 (소문자/공백제거 정규화)
+                                raw_inci = item.get("inci_name")
+                                if raw_inci:
+                                    inci_key = str(raw_inci).strip().lower()
+                                    inci_dict[inci_key] = item
 
-    # 2. 업로드된 CSV 읽기
-    df = pd.read_csv(csv_file_path) #[cite: 1]
-    
+                                # 2) JSON 상단의 cas_no 등록 (세미콜론 복수 번호 분리 대응)
+                                raw_cas = item.get("cas_no")
+                                if raw_cas:
+                                    for c in str(raw_cas).split(";"):
+                                        c_clean = c.strip()
+                                        if c_clean and c_clean != "-":
+                                            cas_dict[c_clean] = item
+                except Exception as e:
+                    print(f"[{target_region.upper()} JSON 로드 오류] {file_name}: {e}")
+
+    # 2. 업로드된 CSV 파일 로드
+    df = None
+    for enc in ["utf-8-sig", "utf-8", "cp949"]:
+        try:
+            df = pd.read_csv(csv_file_path, encoding=enc)
+            break
+        except Exception:
+            continue
+
+    if df is None:
+        return [{"inci_name": "CSV 읽기 실패", "concentration": 0, "status": "ERROR", "is_violation": True, "conditions": "인코딩 오류", "source": "-"}]
+
+    df.columns = [str(c).strip().lower() for c in df.columns]
+
     results = []
-    for _, row in df.iterrows(): #[cite: 1]
-        inci = str(row.get("inci_name", "")).lower().strip() #[cite: 1]
-        conc = float(row.get("concentration", 0.0)) #[cite: 1]
+    for _, row in df.iterrows():
+        inci_raw = str(row.get("inci_name", "")).strip()
+        cas_raw = str(row.get("cas_no", "")).strip()
         
-        # 규제 DB 매칭
-        if inci in rules_dict: #[cite: 1]
-            rule = rules_dict[inci] #[cite: 1]
-            status = rule.get("status") #[cite: 1]
-            max_conc = rule.get("max_concentration") #[cite: 1]
-            
-            is_violation = False
-            violation_reason = "통과"
-            
-            # --- 1차 판정: 금지 원료(PROHIBITED) 필터링 ---
-            if status == "PROHIBITED": #[cite: 1]
-                is_violation = True #[cite: 1]
-                violation_reason = "배합 금지 성분 검출"
-                
-            # --- 2차 판정: 배합한도(max_concentration) 필터링 ---
-            elif max_conc is not None:
-                if conc > max_conc: #[cite: 1]
-                    is_violation = True #[cite: 1]
-                    violation_reason = f"배합한도 초과 (기준: {max_conc}%, 입력: {conc}%)"
-                else:
-                    violation_reason = f"배합한도 준수 (기준: {max_conc}%)"
-            else:
-                # status는 RESTRICTED이나 농도 기준이 아닌 조건부 허용 항목일 경우
-                violation_reason = "조건부 허용 (용도 및 부위 제한 확인 필요)"
+        if not inci_raw or inci_raw.lower() == "nan":
+            continue
 
-            results.append({
-                "inci_name": row.get("inci_name"), #[cite: 1]
-                "concentration": conc, #[cite: 1]
-                "status": status, #[cite: 1]
-                "is_violation": is_violation, #[cite: 1]
-                "reason": violation_reason,
-                "conditions": rule.get("conditions", ""), #[cite: 1]
-                "source": rule.get("regulation_source", "") #[cite: 1]
-            }) #[cite: 1]
-        else:
-            results.append({
-                "inci_name": row.get("inci_name"), #[cite: 1]
-                "concentration": conc, #[cite: 1]
-                "status": "PASS", #[cite: 1]
-                "is_violation": False, #[cite: 1]
-                "reason": "규제 항목 미해당",
-                "conditions": "규제 항목 미해당", #[cite: 1]
-                "source": "-" #[cite: 1]
-            }) #[cite: 1]
+        inci_clean = inci_raw.lower()
+        
+        # 농도 파싱
+        try:
+            conc = float(str(row.get("concentration", 0.0)).replace("%", "").strip())
+        except ValueError:
+            conc = 0.0
+
+        # 해당 국가 DB 내에서 INCI -> CAS 순서로 대조
+        rule = inci_dict.get(inci_clean)
+        if not rule and cas_raw and cas_raw != "-" and cas_raw.lower() != "nan":
+            rule = cas_dict.get(cas_raw)
+
+        if rule:
+            raw_status = str(rule.get("status", "")).strip().upper()
+            max_conc = rule.get("max_concentration")
             
-    return results #[cite: 1]
+            # 사유(conditions_kr 우선) 및 출처
+            reason = rule.get("conditions_kr") or rule.get("conditions") or "규제 세부 규정 확인 필요"
+            source = rule.get("regulation_source") or ""
+
+            # 배합 금지 상태
+            if raw_status in ["PROHIBITED", "BANNED"]:
+                results.append({
+                    "inci_name": inci_raw,
+                    "concentration": conc,
+                    "status": "배합 금지",
+                    "is_violation": True,
+                    "conditions": reason,
+                    "source": source
+                })
+            # 배합 한도 상태
+            elif raw_status == "RESTRICTED":
+                limit_val = None
+                if max_conc is not None:
+                    try:
+                        limit_val = float(str(max_conc).replace("%", "").strip())
+                    except ValueError:
+                        limit_val = None
+
+                if limit_val is not None and conc > limit_val:
+                    results.append({
+                        "inci_name": inci_raw,
+                        "concentration": conc,
+                        "status": "한도 초과",
+                        "is_violation": True,
+                        "conditions": f"[최대 허용 한도 {limit_val}% 초과] {reason}",
+                        "source": source
+                    })
+                else:
+                    results.append({
+                        "inci_name": inci_raw,
+                        "concentration": conc,
+                        "status": "배합 한도 준수",
+                        "is_violation": False,
+                        "conditions": reason,
+                        "source": source
+                    })
+            else:
+                results.append({
+                    "inci_name": inci_raw,
+                    "concentration": conc,
+                    "status": raw_status,
+                    "is_violation": False,
+                    "conditions": reason,
+                    "source": source
+                })
+        else:
+            # 해당 국가에서는 규제되지 않는 원료
+            results.append({
+                "inci_name": inci_raw,
+                "concentration": conc,
+                "status": "미해당",
+                "is_violation": False,
+                "conditions": "규제 항목 미해당 (사용 가능)",
+                "source": ""
+            })
+
+    return results
