@@ -1,2 +1,652 @@
 [
+    {
+        "cas_no": "",
+        "inci_name": "Aluminum powder",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2645"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Annatto",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.203"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Bismuth citrate",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Subject to limitations / [Limits] Hair on the scalp",
+        "regulation_source": "FDA 21 CFR 73.211"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Bismuth oxychloride",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2162"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Bronze powder",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2646"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Caramel",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2085"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Carmine",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2087"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "β-Carotene",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2095"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Chromium hydroxide green",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2326"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Chromium oxide greens",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2327"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Copper powder",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2647"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Dihydroxyacetone",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Subject to limitations / [Limits] For use in tanning preparations",
+        "regulation_source": "FDA 21 CFR 73.215"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Disodium EDTA-copper",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Subject to limitations / [Limits] Shampoos",
+        "regulation_source": "FDA 21 CFR 73.212"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Ferric ammonium ferrocyanide",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2298"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Ferric ferrocyanide",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2299"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Guaiazulene",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.218"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Guanine",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2329"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Henna",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Subject to limitations / [Limits] Hair on the scalp",
+        "regulation_source": "FDA 21 CFR 73.219"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Iron oxides",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.225"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Luminescent zinc sulfide",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Subject to limitations / [Limits] Externally applied facial makeup and nail polish; <10%; for=\"\" infrequent=\"\" use=\"\" (e.g.,=\"\">",
+        "regulation_source": "FDA 21 CFR 73.2995"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Manganese violet",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2775"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Mica",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2496"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Potassium sodium copper chlorophyllin (chlorophyllin-copper complex)",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Subject to limitations / [Limits] Dentifrices; ≤0.1%",
+        "regulation_source": "FDA 21 CFR 73.2125"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Pyrophyllite",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.24"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Silver",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Subject to limitations / [Limits] Fingernail polish; ≤1%",
+        "regulation_source": "FDA 21 CFR 73.25"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Silver nitrate",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] No / [External] No / [Limits] Externally applied professional-use only cosmetics intended to impart color to the eyebrows and eyelashes, NTE 4% by weight, additional restrictions",
+        "regulation_source": "FDA 21 CFR 73.255"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Titanium dioxide",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2575"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Ultramarines",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2725"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Zinc oxide",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 73.2991"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Black No. 2",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Subject to Limitations / [Lipsticks] Subject to Limitations / [External] Subject to Limitations / [Limits] Eyeliner, brush-on-brow, eye shadow, mascara, lipstick, blushers & rouge, makeup & foundation, nail enamel",
+        "regulation_source": "FDA 21 CFR 74.2052"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Black No. 3",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Subject to Limitations / [Lipsticks] No / [External] Subject to Limitations / [Limits] Eyeliner, eye shadow, mascara, face powder",
+        "regulation_source": "FDA 21 CFR 74.2053"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "FD&C Blue No. 1",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes, also Al lake / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2101"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Blue No. 4",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2104"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Brown No. 1",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2151"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "FD&C Green No. 3",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2203"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Green No. 5",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2205"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Green No. 6",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2206"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Green No. 8",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Subject to Limitations / [Limits] ≤0.01%",
+        "regulation_source": "FDA 21 CFR 74.2208"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Orange No. 4",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2254"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Orange No. 5",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Subject to Limitations / [External] Yes / [Limits] Mouthwashes, dentifrices; ≤5% for lipsticks",
+        "regulation_source": "FDA 21 CFR 74.2255"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Orange No. 10",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2260"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Orange No. 11",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2261"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "FD&C Red No. 4",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2304"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Red No. 6",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2306"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Red No. 7",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2307"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Red No. 17",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2317"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Red No. 21",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2321"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Red No. 22",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2322"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Red No. 27",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2327"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Red No. 28",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2328"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Red No. 30",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2330"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Red No. 31",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2331"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Red No. 33",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Subject to Limitations / [External] Yes / [Limits] Lipstick  products ≤3%; mouthwash, dentrifices",
+        "regulation_source": "FDA 21 CFR 74.2333"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Red No. 34",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2334"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Red No. 36",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Subject to Limitations / [External] Yes / [Limits] Lipstick  products ≤3%",
+        "regulation_source": "FDA 21 CFR 74.2336"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "FD&C Red No. 40",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes, also Al lake / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2340"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Violet No. 2",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2602"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Ext. D&C Violet No. 2",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2602a"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "FD&C Yellow No. 5",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] Yes, also Al lake / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2705"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "FD&C Yellow No. 6",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2706"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Yellow No. 7",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2707"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "Ext. D&C Yellow No. 7",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2707a"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Yellow No. 8",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2708"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Yellow No. 10",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] Yes / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2710"
+    },
+    {
+        "cas_no": "",
+        "inci_name": "D&C Yellow No. 11",
+        "kr_name": "",
+        "status": "RESTRICTED",
+        "max_concentration": null,
+        "product_type_scope": "GENERAL",
+        "conditions": "[Eye Area] No / [Lipsticks] No / [External] Yes / [Limits]",
+        "regulation_source": "FDA 21 CFR 74.2711"
+    }
 ]
