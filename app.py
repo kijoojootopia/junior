@@ -1,4 +1,5 @@
 import os
+import json
 from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
 
@@ -17,7 +18,27 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 @app.route('/')
 def index():
     rates = get_current_exchange_rates()
-    return render_template('index.html', rates=rates)
+    pipeline_data = {}
+    for region in ('us', 'eu', 'eac'):
+        file_path = os.path.join(app.root_path, 'data', region, 'pipeline_checklist.json')
+        try:
+            with open(file_path, encoding='utf-8') as source:
+                data = json.load(source)
+            # 미국은 GENERAL/OTC로 나뉘고, 유럽·EAEU는 단일 목록입니다.
+            if isinstance(data, list):
+                data = {'GENERAL': data}
+            if not isinstance(data, dict) or not all(isinstance(items, list) for items in data.values()):
+                raise ValueError('파이프라인 항목은 목록이어야 합니다.')
+            pipeline_data[region] = data
+        except (OSError, ValueError):
+            app.logger.exception('%s 파이프라인 자료를 읽지 못했습니다.', region)
+            pipeline_data[region] = {'GENERAL': []}
+
+    return render_template(
+        'index.html', rates=rates, pipeline_data=pipeline_data,
+        pipeline_items=pipeline_data['us'].get('GENERAL', []),
+        pipeline_label='미국 · 일반 화장품',
+    )
 
 # CSV 업로드 및 성분 판정 API 라우터
 @app.route('/api/screen', methods=['POST'])

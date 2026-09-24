@@ -86,43 +86,43 @@
         </section>
 
         <!-- 구역 3: 맞춤형 수출 서류 파이프라인 로드맵 -->
-        <section class="card area-3">
+        <section class="card area-3 document-pipeline" aria-labelledby="pipeline-title">
             <div class="card-header">
-                <h3>구역 3: 맞춤형 수출 서류 파이프라인</h3>
+                <h3 id="pipeline-title">구역 3: 맞춤형 수출 서류 파이프라인</h3>
+                {% if pipeline_label %}
+                <span class="document-pipeline-label">{{ pipeline_label }}</span>
+                {% endif %}
             </div>
-            <div class="pipeline-steps">
-                <div class="step-node active">
-                    <div class="circle">1</div>
-                    <div class="step-info">
-                        <strong>성분 검토</strong>
-                        <p>금지/한도 대조</p>
-                    </div>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step-node">
-                    <div class="circle">2</div>
-                    <div class="step-info">
-                        <strong>서류 준비</strong>
-                        <p>MSDS/CPSR 구비</p>
-                    </div>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step-node">
-                    <div class="circle">3</div>
-                    <div class="step-info">
-                        <strong>인증/신고</strong>
-                        <p>MoCRA / CPNP</p>
-                    </div>
-                </div>
-                <div class="step-connector"></div>
-                <div class="step-node">
-                    <div class="circle">4</div>
-                    <div class="step-info">
-                        <strong>현지 통관</strong>
-                        <p>라벨링 및 수출입 검역</p>
-                    </div>
-                </div>
+
+            {% if pipeline_items %}
+            <div class="document-pipeline-scroll" role="region" aria-label="국가별 수출 서류 단계" tabindex="0">
+                <ol class="document-pipeline-timeline">
+                    {% for item in pipeline_items | sort(attribute='stage_step') %}
+                    <li class="document-pipeline-step">
+                        <div class="document-pipeline-heading">
+                            <span class="document-pipeline-number" aria-hidden="true">{{ item.stage_step }}</span>
+                            <h4><span class="document-pipeline-step-label">{{ item.stage_step }}단계</span> {{ item.task_name }}</h4>
+                        </div>
+                        <div class="document-pipeline-card">
+                            <dl>
+                                <dt>준비 서류</dt>
+                                <dd>{{ item.required_doc }}</dd>
+                                <dt>예상 기간</dt>
+                                <dd>{% if item.estimated_days is defined and item.estimated_days is not none %}{{ item.estimated_days }}일{% else %}미정{% endif %}</dd>
+                                <dt>필수 여부</dt>
+                                <dd>{% if item.is_mandatory is sameas true %}필수{% elif item.is_mandatory is sameas false %}선택{% else %}미정{% endif %}</dd>
+                            </dl>
+                            {% if item.guide_url and item.guide_url.startswith(('https://', 'http://')) %}
+                            <a class="document-pipeline-guide" href="{{ item.guide_url }}" target="_blank" rel="noopener noreferrer">안내 페이지 열기 <span>(새 창)</span></a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ol>
             </div>
+            {% else %}
+            <p class="document-pipeline-empty" role="status">표시할 수출 서류 안내가 없습니다.</p>
+            {% endif %}
         </section>
     </div>
 </div>
