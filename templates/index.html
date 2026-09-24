@@ -7,10 +7,20 @@
         <a href="{{ url_for('export.dashboard') }}">화장품 해외 진출 지도</a>
         <h2>K-뷰티 글로벌 규제 및 수출입 파이프라인</h2>
         <div class="fx-ticker">
-            <span class="badge">실시간 고시 환율</span>
-            <span>USD: <strong>{{ rates.USD }}</strong>원</span>
-            <span>EUR: <strong>{{ rates.EUR }}</strong>원</span>
-            <span>RUB: <strong>{{ rates.RUB }}</strong>원</span>
+            <span class="badge" title="ExchangeRate-API 참고 환율 · 요금제에 따라 갱신">환율</span>
+            <span>기준일시: <strong>{{ rates.get('updated_at') or rates.get('as_of') or '확인 불가' }}</strong></span>
+            {% for currency in ('USD', 'EUR', 'RUB', 'AED') %}
+            <span>1 {{ currency }}:
+                {% if rates.get(currency) is not none %}
+                <strong>{{ '{:,.2f}'.format(rates[currency]) }}</strong>원
+                {% else %}
+                <strong>{{ '제공 자료 없음' if rates.get('as_of') else '조회 불가' }}</strong>
+                {% endif %}
+            </span>
+            {% endfor %}
+            {% if rates.get('message') %}
+            <span role="status">{{ rates.message }}</span>
+            {% endif %}
         </div>
     </header>
 
@@ -24,6 +34,7 @@
                     <option value="us">미국 (FDA / MoCRA)</option>
                     <option value="eu">유럽 (CosIng / CPNP)</option>
                     <option value="eac">러시아/EAEU (CU TR 009)</option>
+                    <option value="uae">UAE (아랍에미리트)</option>
                 </select>
             </div>
             <div class="form-group">
@@ -89,11 +100,19 @@
         <section class="card area-3 document-pipeline" aria-labelledby="pipeline-title">
             <div class="card-header">
                 <h3 id="pipeline-title">구역 3: 맞춤형 수출 서류 파이프라인</h3>
-                {% if pipeline_label %}
-                <span class="document-pipeline-label">{{ pipeline_label }}</span>
-                {% endif %}
+                <span id="pipeline-label" class="document-pipeline-label" aria-live="polite">{{ pipeline_label }}</span>
+                <div id="pipeline-type-control">
+                    <label for="pipelineTypeSelect">미국 제품 유형:</label>
+                    <select id="pipelineTypeSelect">
+                        <option value="GENERAL">일반 화장품</option>
+                        <option value="OTC">OTC</option>
+                    </select>
+                </div>
             </div>
 
+            {% for region, product_type in [('us', 'GENERAL'), ('us', 'OTC'), ('eu', 'GENERAL'), ('eac', 'GENERAL'), ('uae', 'GENERAL')] %}
+            {% set pipeline_items = pipeline_data.get(region, {}).get(product_type, []) %}
+            <div class="document-pipeline-panel" data-region="{{ region }}" data-product-type="{{ product_type }}"{% if region != 'us' or product_type != 'GENERAL' %} hidden{% endif %}>
             {% if pipeline_items %}
             <div class="document-pipeline-scroll" role="region" aria-label="국가별 수출 서류 단계" tabindex="0">
                 <ol class="document-pipeline-timeline">
@@ -123,6 +142,8 @@
             {% else %}
             <p class="document-pipeline-empty" role="status">표시할 수출 서류 안내가 없습니다.</p>
             {% endif %}
+            </div>
+            {% endfor %}
         </section>
     </div>
 </div>

@@ -19,12 +19,12 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 def index():
     rates = get_current_exchange_rates()
     pipeline_data = {}
-    for region in ('us', 'eu', 'eac'):
+    for region in ('us', 'eu', 'eac', 'uae'):
         file_path = os.path.join(app.root_path, 'data', region, 'pipeline_checklist.json')
         try:
             with open(file_path, encoding='utf-8') as source:
                 data = json.load(source)
-            # 미국은 GENERAL/OTC로 나뉘고, 유럽·EAEU는 단일 목록입니다.
+            # 미국은 GENERAL/OTC로 나뉘고, 다른 권역은 단일 목록입니다.
             if isinstance(data, list):
                 data = {'GENERAL': data}
             if not isinstance(data, dict) or not all(isinstance(items, list) for items in data.values()):

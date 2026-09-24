@@ -3,8 +3,8 @@
 body { background-color: #f4f7f6; color: #333; padding: 20px; }
 
 .dashboard-container { max-width: 1200px; margin: 0 auto; }
-.dashboard-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
-.fx-ticker { display: flex; gap: 15px; align-items: center; background: #fff; padding: 10px 16px; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); font-size: 14px; }
+.dashboard-header { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.fx-ticker { display: flex; flex-wrap: wrap; gap: 15px; align-items: center; max-width: 100%; background: #fff; padding: 10px 16px; border-radius: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); font-size: 14px; }
 .fx-ticker .badge { background: #4a90e2; color: #fff; padding: 4px 8px; border-radius: 12px; font-weight: bold; font-size: 12px; }
 
 .card { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 20px; }
