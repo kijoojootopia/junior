@@ -6,12 +6,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!uploadForm) return;
 
+    const regionSelect = document.getElementById("regionSelect");
+    const pipelineTypeSelect = document.getElementById("pipelineTypeSelect");
+    const pipelineTypeControl = document.getElementById("pipeline-type-control");
+    const pipelineLabel = document.getElementById("pipeline-label");
+    const pipelinePanels = document.querySelectorAll(".document-pipeline-panel");
+
+    function updatePipeline() {
+        const isUS = regionSelect.value === "us";
+        const productType = isUS ? pipelineTypeSelect.value : "GENERAL";
+        pipelineTypeControl.hidden = !isUS;
+        pipelinePanels.forEach(panel => {
+            panel.hidden = panel.dataset.region !== regionSelect.value
+                || panel.dataset.productType !== productType;
+        });
+        pipelineLabel.textContent = regionSelect.selectedOptions[0].textContent
+            + (isUS ? ` · ${pipelineTypeSelect.selectedOptions[0].textContent}` : "");
+    }
+
+    regionSelect.addEventListener("change", updatePipeline);
+    pipelineTypeSelect.addEventListener("change", updatePipeline);
+    updatePipeline();
+
     uploadForm.addEventListener("submit", async (e) => {
         // 1. 브라우저 기본 페이지 새로고침 차단
         e.preventDefault();
 
         const fileInput = document.getElementById("csvFile");
-        const regionSelect = document.getElementById("regionSelect");
 
         if (!fileInput.files || fileInput.files.length === 0) {
             alert("CSV 파일을 선택해주세요.");
