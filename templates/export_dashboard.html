@@ -12,10 +12,18 @@
     <aside class="export-overview" aria-label="한국 전체 수출 통계">
       <span class="export-eyebrow">KOREA · GLOBAL</span>
       <h2>한국 전체 수출 통계</h2>
-      <p>권역과 관계없이 한국 전체 통계를 보여줍니다.</p>
-      <div class="export-stat"><h3>총 화장품 수출액 <small>(USD)</small></h3><p>자료 준비 중</p></div>
+      <p>권역과 관계없이 한국 전체 통계를 보여줍니다.
+        {% if global_stats %}<br>출처: <a href="{{ global_stats.source_url }}" target="_blank" rel="noopener noreferrer">{{ global_stats.source_name }}</a><br>자료 기준일: {{ global_stats.source_as_of }}{% endif %}
+      </p>
+      {% if global_stats %}
+      <div class="export-stat"><h3>총 화장품 수출액</h3><p>약 {{ global_stats.approx_hundred_million_usd }}억 달러</p><small>원자료: {{ "{:,}".format(global_stats.export_thousand_usd) }}천 USD</small></div>
+      <div class="export-stat"><h3>전년 대비 성장률</h3><p>{{ global_stats.growth_pct }}%</p></div>
+      <div class="export-stat"><h3>통계 기준연도</h3><p>{{ global_stats.year }}년</p></div>
+      {% else %}
+      <div class="export-stat"><h3>총 화장품 수출액</h3><p>자료 준비 중</p></div>
       <div class="export-stat"><h3>전년 대비 성장률</h3><p>자료 준비 중</p></div>
       <div class="export-stat"><h3>통계 기준연도</h3><p>자료 준비 중</p></div>
+      {% endif %}
     </aside>
     <div class="export-map" aria-label="권역 선택 지도">
       <div id="export-globe" data-map-url="{{ url_for('static', filename='img/globe-surface.png') }}" aria-hidden="true"></div>

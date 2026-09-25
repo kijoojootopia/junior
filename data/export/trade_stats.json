@@ -1,1 +1,11 @@
-{}
+{
+  "global": {
+    "year": 2025,
+    "export_thousand_usd": 11417952,
+    "growth_pct": 11.4,
+    "source_name": "KCII 수출입 총괄현황",
+    "source_url": "https://www.kcii.re.kr/trade/total",
+    "source_as_of": "2026-09-15"
+  },
+  "records": []
+}

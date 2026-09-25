@@ -4,7 +4,7 @@ import re
 
 from flask import Blueprint, jsonify, render_template, request
 
-from services.export_service import get_trade_stats
+from services.export_service import get_global_trade_stats, get_trade_stats
 
 
 export_bp = Blueprint("export", __name__)
@@ -15,7 +15,8 @@ COUNTRIES = {"US": "미국", "DE": "독일", "FR": "프랑스", "RU": "러시아
 
 @export_bp.get("/export")
 def dashboard():
-    return render_template("export_dashboard.html", countries=REGIONS)
+    return render_template("export_dashboard.html", countries=REGIONS,
+                           global_stats=get_global_trade_stats())
 
 
 @export_bp.get("/api/export/trade")

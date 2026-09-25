@@ -1,10 +1,18 @@
-"""국가별 화장품 수출 통계 조회."""
+"""화장품 수출 통계 조회."""
 
 import json
 from pathlib import Path
 
 
 TRADE_FILE = Path(__file__).resolve().parent.parent / "data" / "export" / "trade_stats.json"
+
+
+def get_global_trade_stats():
+    with TRADE_FILE.open(encoding="utf-8") as source:
+        stats = json.load(source).get("global")
+    if stats:
+        stats["approx_hundred_million_usd"] = round(stats["export_thousand_usd"] / 100_000)
+    return stats
 
 
 def get_trade_stats(country, hs_code=None):
