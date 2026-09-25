@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!uploadForm) return;
 
     const regionSelect = document.getElementById("regionSelect");
+    const requestedRegion = new URLSearchParams(window.location.search).get("region");
+    if ([...regionSelect.options].some(option => option.value === requestedRegion)) {
+        regionSelect.value = requestedRegion;
+    }
     const pipelineTypeSelect = document.getElementById("pipelineTypeSelect");
     const pipelineTypeControl = document.getElementById("pipeline-type-control");
     const pipelineLabel = document.getElementById("pipeline-label");

@@ -1,15 +1,30 @@
-.export-dashboard { max-width: 1100px; margin: 0 auto; padding: 24px; }
-.export-map { position: relative; max-width: 940px; margin: 24px auto; }
-.export-map img { display: block; width: 100%; height: auto; }
-.map-pin { position: absolute; left: var(--x); top: var(--y); transform: translate(-50%, -50%); border: 0; border-radius: 18px; padding: 5px 9px; background: #225ea8; color: white; cursor: pointer; }
-.map-pin:hover, .map-pin[aria-pressed="true"] { background: #143d70; }
-.map-pin:focus-visible, .country-list button:focus-visible { outline: 3px solid #f0a500; outline-offset: 2px; }
-.country-list { display: flex; flex-wrap: wrap; gap: 8px; }
-.country-list button { padding: 8px 12px; cursor: pointer; }
-.country-list button[aria-pressed="true"] { font-weight: bold; border-color: #225ea8; }
-.export-results { margin-top: 24px; }
-.export-cards { display: flex; flex-wrap: wrap; gap: 12px; }
-.export-cards > div { min-width: 180px; padding: 16px; background: #f4f8fc; border-radius: 10px; }
-.trade-chart-row { display: grid; grid-template-columns: 4em minmax(100px, 1fr) 10em; gap: 12px; align-items: center; margin: 8px 0; }
-.trade-chart-row meter { width: 100%; height: 22px; }
-@media (max-width: 600px) { .map-pin { font-size: 10px; padding: 3px; } .trade-chart-row { grid-template-columns: 3em 1fr; } .trade-chart-row span:last-child { grid-column: 2; } }
+.export-dashboard { max-width: 1440px; margin: 0 auto; padding: 32px 24px 48px; color: #343a57; }
+.export-header { margin-bottom: 24px; }
+.export-header a { color: #675bb0; font-size: 14px; }
+.export-header h1 { margin: 12px 0 4px; font-size: clamp(26px, 3vw, 36px); }
+.export-header p { margin: 0; color: #717690; }
+.export-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 18px; align-items: stretch; }
+.export-overview { padding: 24px; border: 1px solid #ebebf3; border-radius: 24px; background: #fff; box-shadow: 0 12px 30px #4042770d; }
+.export-eyebrow { color: #8173c1; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+.export-overview h2 { margin: 10px 0 6px; font-size: 21px; }
+.export-overview > p { margin: 0 0 24px; color: #777c92; font-size: 13px; line-height: 1.5; }
+.export-stat { margin-top: 12px; padding: 18px; border: 1px solid #ededf5; border-radius: 16px; background: #fafaff; }
+.export-stat h3 { margin: 0 0 12px; color: #656a80; font-size: 13px; font-weight: 500; }
+.export-stat h3 small { font-size: 11px; }
+.export-stat p { margin: 0; color: #343a57; font-size: 17px; font-weight: 700; }
+.export-map { position: relative; min-width: 0; min-height: 600px; overflow: hidden; border: 1px solid #f1f0f9; border-radius: 28px; background: radial-gradient(circle, #fff 34%, #f0f1fa 100%); }
+#export-globe { width: 100%; height: 600px; }
+#export-globe:not(.is-ready) { position: absolute; inset: 0; opacity: 0; pointer-events: none; }
+#export-map-fallback { display: block; width: 100%; height: auto; }
+#export-globe.is-ready + #export-map-fallback { display: none; }
+.export-fallback { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px; }
+.export-fallback a { padding: 8px 12px; border: 1px solid #e8e7f1; border-radius: 10px; background: #fff; color: #343a57; text-decoration: none; }
+#export-globe.is-ready ~ .export-fallback { display: none; }
+.globe-marker { display: flex; flex-direction: column; align-items: center; width: 46px; height: 64px; padding: 0; background: transparent; pointer-events: auto; }
+.globe-marker__tile { position: relative; display: grid; place-items: center; width: 40px; height: 42px; border: 5px solid #fff; border-radius: 11px; background: #2bc875; color: #fff; box-shadow: 0 3px 10px #50507840; }
+.globe-marker__tile::after { position: absolute; bottom: -8px; width: 9px; height: 9px; background: #fff; content: ""; transform: rotate(45deg); }
+.globe-marker__tile svg { z-index: 1; width: 23px; height: 23px; }
+.globe-marker__ring { width: 15px; height: 15px; margin-top: 5px; border: 3px solid #7565d4; border-radius: 50%; background: #fff; box-shadow: 0 0 0 7px #7565d43b; }
+.globe-marker:focus-visible { outline: 3px solid #7565d4; outline-offset: 3px; border-radius: 12px; }
+@media (max-width: 800px) { .export-layout { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .export-dashboard { padding: 20px 16px 32px; } .export-map { min-height: 380px; } #export-globe { height: 380px; } }

@@ -1,6 +1,6 @@
 import os
 import json
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 from dotenv import load_dotenv
 
 # .env 환경변수 로드
@@ -14,8 +14,14 @@ app = Flask(__name__)
 app.register_blueprint(export_bp)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
-# 메인 페이지 라우터
+# 첫 접속은 수출 권역 지도로 이동
 @app.route('/')
+def home():
+    return redirect(url_for('export.dashboard'))
+
+
+# 진단 대시보드 라우터
+@app.route('/dashboard')
 def index():
     rates = get_current_exchange_rates()
     pipeline_data = {}
