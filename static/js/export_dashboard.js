@@ -2,10 +2,10 @@ const globeContainer = document.getElementById("export-globe");
 if (globeContainer && window.Globe) {
   try {
     const locations = [
-      { country: "US", lat: 39, lng: -98 },
-      { country: "EU", lat: 50, lng: 10 },
-      { country: "EAC", lat: 55, lng: 75 },
-      { country: "AE", lat: 24, lng: 54 },
+      { country: "US", badge: "US", lat: 39, lng: -98 },
+      { country: "EU", badge: "EU", lat: 50, lng: 10 },
+      { country: "EAC", badge: "EAEU", lat: 55, lng: 75 },
+      { country: "AE", badge: "UAE", lat: 24, lng: 54 },
     ];
     const globe = new Globe(globeContainer)
       .globeImageUrl(globeContainer.dataset.mapUrl)
@@ -20,7 +20,7 @@ if (globeContainer && window.Globe) {
         marker.href = target.href;
         marker.className = "globe-marker";
         marker.setAttribute("aria-label", target.textContent.trim());
-        marker.innerHTML = '<span class="globe-marker__tile"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 12h12c4 0 4-5 0-5-2 0-3 1-3 2M6 16h18c4 0 4 5 0 5-2 0-3-1-3-2M9 20h7c4 0 4 5 0 5-2 0-3-1-3-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="globe-marker__ring"></span>';
+        marker.innerHTML = `<span class="globe-marker__tile">${location.badge}</span><span class="globe-marker__ring"></span>`;
         return marker;
       })
       .onGlobeReady(() => globeContainer.classList.add("is-ready"))

@@ -156,7 +156,7 @@ HS 코드 필터는 `hs_code` 쿼리 매개변수로 전달할 수 있습니다.
 - 수출액은 같은 국가·연도의 품목별 금액을 합산합니다. 원자료는 `data/export/trade_stats.json`의 `records` 배열에 `country`(국가 코드), `hs_code`, `year`(정수), `export_usd`(USD 금액) 필드로 저장하도록 설계했습니다. 동일 국가·연도·HS 코드의 중복 기록은 넣지 않아야 합니다.
 - 현재 수출 통계 파일은 빈 객체(`{}`)이며 실제 수출액, 성장률 또는 샘플 수치를 넣지 않았습니다. 수출적합도 KPI의 산식 및 가중치도 미정입니다.
 - 세계 지도 원본은 Wikimedia Commons의 [CC0 세계 지도](https://commons.wikimedia.org/wiki/File:BlankMap-World-Equirectangular.svg)입니다. 이 SVG를 밝은 육지·바다 색으로 바꿔 `static/img/globe-surface.png`로 저장했습니다.
-- `/export`의 지구본은 Globe.GL을 CDN에서 불러와 위 PNG를 표면에 입힙니다. 권역 위치는 초록 아이콘과 보라색 고리로 표시하며, 아이콘을 누르면 해당 권역의 진단 화면으로 이동합니다. 지구본은 지형 높이 데이터를 사용하지 않으며, CDN이나 WebGL을 사용할 수 없으면 평면 지도 이미지와 그 아래 권역 링크를 보여줍니다.
+- `/export`의 지구본은 Globe.GL을 CDN에서 불러와 위 PNG를 표면에 입힙니다. 권역 위치는 초록 아이콘 안의 `US`·`EU`·`EAEU`·`UAE` 약자와 보라색 고리로 구분하며, 아이콘을 누르면 해당 권역의 진단 화면으로 이동합니다. 유라시아의 내부 코드는 `EAC`지만 화면에는 권역명인 `EAEU`를 표시합니다. 지구본은 지형 높이 데이터를 사용하지 않으며, CDN이나 WebGL을 사용할 수 없으면 평면 지도 이미지와 그 아래 권역 링크를 보여줍니다.
 
 추가 파일 목록:
 
