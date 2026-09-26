@@ -165,7 +165,12 @@ HS 코드 필터는 `hs_code` 쿼리 매개변수로 전달할 수 있습니다.
 - 국가별 API는 같은 국가·연도의 품목별 금액을 합산합니다. 국가별 원자료는 `data/export/trade_stats.json`의 `records` 배열에 `country`(국가 코드), `hs_code`, `year`(정수), `export_usd`(USD 금액) 필드로 저장하도록 설계했습니다. 동일 국가·연도·HS 코드의 중복 기록은 넣지 않아야 합니다.
 - 현재 `records`에는 국가·권역별 원자료가 없습니다. 수출적합도 KPI의 산식 및 가중치도 미정입니다.
 - 세계 지도 원본은 Wikimedia Commons의 [CC0 세계 지도](https://commons.wikimedia.org/wiki/File:BlankMap-World-Equirectangular.svg)입니다. 이 SVG를 밝은 육지·바다 색으로 바꿔 `static/img/globe-surface.png`로 저장했습니다.
-- `/export`의 지구본은 Globe.GL을 CDN에서 불러와 위 PNG를 표면에 입힙니다. 권역 위치는 초록 아이콘 안의 `US`·`EU`·`EAEU`·`UAE` 약자와 보라색 고리로 구분하며, 아이콘을 누르면 해당 권역의 진단 화면으로 이동합니다. 유라시아의 내부 코드는 `EAC`지만 화면에는 권역명인 `EAEU`를 표시합니다. 지구본은 지형 높이 데이터를 사용하지 않으며, CDN이나 WebGL을 사용할 수 없으면 평면 지도 이미지와 그 아래 권역 링크를 보여줍니다.
+- `/export`의 지구본은 Figma Make 버전 3의 디자인을 기존 Globe.GL에 맞게 옮겼습니다. 흰 도자기 재질의 바다, 연보라 육지·국가 경계, 보라색 핀과 둥근 약자 라벨을 표시합니다. 초기 화면은 아시아(위도 22°, 경도 115°) 중심이며 드래그 회전이 가능합니다. 자동 회전과 확대·축소는 꺼 두었습니다.
+- `KR`은 한국 원산지 표시이고, `US`·`EU`·`EAEU`·`UAE` 핀을 누르면 기존처럼 해당 권역의 진단 화면으로 이동합니다. 내부 코드 `EAC`·`AE`와 진단 화면의 `eac`·`uae` 연결을 유지합니다. 지구본 뒤쪽 권역과 키보드 사용자를 위해 아래에 네 권역 링크도 항상 표시합니다.
+- 지도 데이터는 Figma 프로젝트에 포함된 Natural Earth 110m 국가 경계 GeoJSON(177개 지형)을 `static/img/ne_110m_admin_0_countries.json`으로 가져왔습니다. [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/)의 공개 지리 자료이며 국가·권역별 수출 통계나 규제 판정에 사용하지 않습니다. 상세 지형 높이 데이터는 없습니다.
+- 지도 자료는 로컬 정적 파일로 제공하고 Globe.GL 라이브러리만 기존 CDN을 사용합니다. CDN·WebGL·지도 데이터 로딩에 실패하면 평면 지도와 권역 링크를 표시합니다. 기존 PNG는 보존하지만 새 지구본에서는 사용하지 않습니다. React·Tailwind·추가 Three.js 패키지는 도입하지 않았습니다.
+- 기존 2열 구성, 한국 전체 통계 계산·출처·기준일을 유지했습니다. Figma의 미구현 메뉴, 가짜 통계, 시안 전용 안내는 가져오지 않았습니다. 서버 및 통계 JSON 변경은 없습니다.
+- `node test_export_globe.cjs`로 권역 코드별 링크, 한국 원산지 표시, CDN·지도 자료·WebGL 실패 시 대체 처리를 검사할 수 있습니다. 브라우저의 실제 렌더링은 별도 확인합니다.
 
 추가 파일 목록:
 
@@ -173,7 +178,8 @@ HS 코드 필터는 `hs_code` 쿼리 매개변수로 전달할 수 있습니다.
 - `services/export_service.py`: 수출 통계 집계 및 성장률 계산
 - `templates/export_dashboard.html`: 한국 전체 통계 카드·지구본·대체 권역 링크 화면
 - `static/css/export_dashboard.css`: 2열 배치와 지구본·카드 스타일
-- `static/js/export_dashboard.js`: 지구본 아이콘 링크
+- `static/js/export_dashboard.js`: Figma 재질·국가 경계·핀, 기존 진단 링크와 로딩 실패 대체 처리
+- `static/img/ne_110m_admin_0_countries.json`: Figma에서 가져온 Natural Earth 110m 국가 경계 데이터
 - `static/img/world.svg`: 세계 지도 배경
 - `static/img/globe-surface.png`: 지구본의 밝은 표면 이미지
 - `data/export/hs_codes.json`: HS 코드 매핑 저장용

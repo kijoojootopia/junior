@@ -1,29 +1,45 @@
-.export-dashboard { max-width: 1440px; margin: 0 auto; padding: 32px 24px 48px; color: #343a57; }
-.export-header { margin-bottom: 24px; }
-.export-header a { color: #675bb0; font-size: 14px; }
-.export-header h1 { margin: 12px 0 4px; font-size: clamp(26px, 3vw, 36px); }
-.export-header p { margin: 0; color: #717690; }
-.export-layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 18px; align-items: stretch; }
-.export-overview { padding: 24px; border: 1px solid #ebebf3; border-radius: 24px; background: #fff; box-shadow: 0 12px 30px #4042770d; }
-.export-eyebrow { color: #8173c1; font-size: 11px; font-weight: 700; letter-spacing: .12em; }
-.export-overview h2 { margin: 10px 0 6px; font-size: 21px; }
-.export-overview > p { margin: 0 0 24px; color: #777c92; font-size: 13px; line-height: 1.5; }
-.export-stat { margin-top: 12px; padding: 18px; border: 1px solid #ededf5; border-radius: 16px; background: #fafaff; }
-.export-stat h3 { margin: 0 0 12px; color: #656a80; font-size: 13px; font-weight: 500; }
-.export-stat h3 small { font-size: 11px; }
-.export-stat p { margin: 0; color: #343a57; font-size: 17px; font-weight: 700; }
-.export-map { position: relative; min-width: 0; min-height: 600px; overflow: hidden; border: 1px solid #f1f0f9; border-radius: 28px; background: radial-gradient(circle, #fff 34%, #f0f1fa 100%); }
-#export-globe { width: 100%; height: 600px; }
+﻿.export-dashboard { max-width: 1440px; margin: 0 auto; padding: 28px 24px 40px; color: #2d2548; }
+.export-header { margin-bottom: 26px; }
+.export-header a { color: #6655a8; font-size: 13px; text-underline-offset: 3px; }
+.export-header h1 { margin: 14px 0 6px; font-size: clamp(26px, 3vw, 36px); letter-spacing: -.04em; }
+.export-header p { margin: 0; color: #6b6490; font-size: 14px; }
+.export-layout { display: grid; grid-template-columns: 264px minmax(0, 1fr); gap: 20px; align-items: stretch; }
+.export-overview { padding: 26px 22px; border: 1px solid #e8e3f4; border-radius: 24px; background: #fff; box-shadow: 0 10px 32px #4d437009; }
+.export-eyebrow { color: #7b6bae; font-size: 10px; font-weight: 700; letter-spacing: .14em; }
+.export-overview h2 { margin: 12px 0 8px; font-size: 20px; letter-spacing: -.04em; }
+.export-overview > p { margin: 0 0 28px; color: #6b6490; font-size: 12px; line-height: 1.8; }
+.export-overview > p a { color: #6655a8; text-underline-offset: 3px; }
+.export-stat { margin-top: 14px; padding: 20px 16px; border: 1px solid #ede9f8; border-radius: 16px; background: #faf9fe; }
+.export-stat h3 { margin: 0 0 12px; color: #5a5278; font-size: 12px; font-weight: 500; }
+.export-stat p { margin: 0; color: #4d4370; font-size: 23px; font-weight: 700; letter-spacing: -.04em; }
+.export-stat small { display: block; margin-top: 7px; color: #6b6490; font-size: 11px; line-height: 1.5; }
+.export-map { position: relative; min-width: 0; overflow: hidden; border: 1px solid #e8e3f4; border-radius: 28px; background: #efecf8; display: flex; flex-direction: column; justify-content: center; }
+#export-globe { width: 100%; height: clamp(360px, calc(100vh - 320px), 580px); }
 #export-globe:not(.is-ready) { position: absolute; inset: 0; opacity: 0; pointer-events: none; }
-#export-map-fallback { display: block; width: 100%; height: auto; }
+#export-globe canvas { filter: drop-shadow(0 12px 18px #6655a81c); }
+#export-map-fallback { display: block; width: 100%; height: auto; padding: 24px; }
 #export-globe.is-ready + #export-map-fallback { display: none; }
-.export-fallback { display: flex; flex-wrap: wrap; gap: 8px; padding: 16px; }
-.export-fallback a { padding: 8px 12px; border: 1px solid #e8e7f1; border-radius: 10px; background: #fff; color: #343a57; text-decoration: none; }
-#export-globe.is-ready ~ .export-fallback { display: none; }
-.globe-marker { display: flex; flex-direction: column; align-items: center; width: 60px; height: 64px; padding: 0; background: transparent; pointer-events: auto; }
-.globe-marker__tile { position: relative; display: grid; place-items: center; width: 52px; height: 42px; border: 5px solid #fff; border-radius: 11px; background: #2bc875; color: #fff; box-shadow: 0 3px 10px #50507840; font-size: 12px; font-weight: 700; letter-spacing: .01em; white-space: nowrap; }
-.globe-marker__tile::after { position: absolute; bottom: -8px; width: 9px; height: 9px; background: #fff; content: ""; transform: rotate(45deg); }
-.globe-marker__ring { width: 15px; height: 15px; margin-top: 5px; border: 3px solid #7565d4; border-radius: 50%; background: #fff; box-shadow: 0 0 0 7px #7565d43b; }
-.globe-marker:focus-visible { outline: 3px solid #7565d4; outline-offset: 3px; border-radius: 12px; }
-@media (max-width: 800px) { .export-layout { grid-template-columns: 1fr; } }
-@media (max-width: 700px) { .export-dashboard { padding: 20px 16px 32px; } .export-map { min-height: 380px; } #export-globe { height: 380px; } }
+.export-map-caption { display: none; text-align: center; padding: 0 20px; color: #6b6490; font-size: 12px; line-height: 1.6; }
+#export-globe.is-ready ~ .export-map-caption { display: block; }
+.export-fallback { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; padding: 18px 20px 24px; }
+.export-fallback a { padding: 10px 15px; border: 1px solid #ddd6f3; border-radius: 12px; background: #ffffffd9; color: #4d4370; font-size: 13px; text-decoration: none; transition: background .15s; }
+.export-fallback a:hover { background: #e8e3f5; }
+.globe-marker { display: block; transform: translate(10px, -10px); padding: 6px 9px; border: 1px solid #c4b8e8; border-radius: 999px; background: #fffffff2; color: #4d4370; box-shadow: 0 4px 12px #4d437029; font-size: 12px; font-weight: 700; line-height: 1; text-decoration: none; white-space: nowrap; pointer-events: auto; }
+.globe-marker--origin, a.globe-marker:hover { border-color: #7b6bae; background: #5c4e8a; color: #fff; }
+.globe-marker--origin { pointer-events: none; }
+.globe-marker--eu { translate: -30px 14px; }
+.export-dashboard a:focus-visible { outline: 3px solid #6655a8; outline-offset: 4px; }
+@media (max-width: 800px) {
+  .export-layout { grid-template-columns: 1fr; }
+  .export-overview { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .export-overview > .export-eyebrow, .export-overview > h2, .export-overview > p { grid-column: 1 / -1; margin: 0; }
+  .export-stat { padding: 16px 12px; }
+  .export-stat p { font-size: 20px; }
+  #export-globe { height: clamp(320px, 85vw, 560px); }
+}
+@media (max-width: 480px) {
+  .export-dashboard { padding: 16px 0 24px; }
+  .export-overview { display: block; padding: 22px; }
+  .export-overview > h2 { margin: 10px 0 8px; }
+  .export-map-caption { font-size: 11px; }
+}

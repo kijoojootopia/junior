@@ -26,9 +26,10 @@
       {% endif %}
     </aside>
     <div class="export-map" aria-label="권역 선택 지도">
-      <div id="export-globe" data-map-url="{{ url_for('static', filename='img/globe-surface.png') }}" aria-hidden="true"></div>
+      <div id="export-globe" data-map-url="{{ url_for('static', filename='img/ne_110m_admin_0_countries.json') }}"></div>
       <img id="export-map-fallback" src="{{ url_for('static', filename='img/world.svg') }}" alt="세계 지도">
-      <nav class="export-fallback" aria-label="지구본을 사용할 수 없을 때 권역 선택">
+      <p class="export-map-caption">아시아 중심 · 드래그하여 회전 · 권역 핀을 눌러 진단하기</p>
+      <nav class="export-fallback" aria-label="수출 권역 진단 바로가기">
         {% for code, name in countries.items() %}<a data-country="{{ code }}" href="{{ url_for('index', region=('uae' if code == 'AE' else code|lower)) }}">{{ name }}</a>{% endfor %}
       </nav>
     </div>
